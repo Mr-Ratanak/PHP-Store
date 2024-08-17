@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
+
+:root{
+   --main-color:#2980b9;
+   --orange:#f39c12;
+   --red:#e74c3c;
+   --black:#444;
+   --white:#fff;
+   --light-color:#777;
+   --light-bg:#f5f5f5;
+   --border:.2rem solid var(--black);
+   --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+*{
+   font-family: 'Nunito', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+}
+
+*::selection{
+   background-color: var(--main-color);
+   color:var(--white);
+}
+
+::-webkit-scrollbar{
+   height: .5rem;
+   width: 1rem;
+}
+
+::-webkit-scrollbar-track{
+   background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+   background-color: var(--main-color);
+}
+
+html{
+   overflow-x: hidden;
+}
+
+body{
+   background-color: var(--light-bg);
+   /* padding-bottom: 10rem; */
+}
+
+section{
+   padding:2rem;
+   max-width: 1200px;
+   margin:0 auto;
+}
+
+.heading{
+   font-size: 2rem;
+   color:var(--black);
+   margin-bottom: 2rem;
+   text-align: center;
+   text-transform: uppercase;
+}
+
+.admin-nav{
+   width: 250px;
+   height: 100vh;
+   min-height: 100vh;
+   overflow: hidden;
+   background-color: #343a40;
+   transition: 0.3s all ease-in-out;
+   position: sticky;
+   top: 0;
+   left: 0;
+}
+.admin-link{
+   background-color: #343a40;
+}
+.admin-link:hover, .nav-active{
+   background-color: #212529;
+   text-decoration: none;
+}
+.animate{
+   width: 0;
+   transition: all 0.3s ease-in-out;
+}
+.btn-add{
+   display: block;
+   padding: .50rem;
+   font-size: 1.1rem;
+   background-color: var(--main-color);
+   cursor: pointer;
+   width: max-content;
+   border-radius: 0;
+   float: right;
+   outline: none;
+   color: var(--white);
+   margin: .50rem 0;
+}
+.btn-del{
+   display: block;
+   padding: .50rem;
+   font-size: 1.1rem;
+   background-color: var(--orange);
+   cursor: pointer;
+   width: max-content;
+   border-radius: 0;
+   float: right;
+   outline: none;
+   color: var(--white);
+   margin: .50rem 0;
+}
+.btn-add:hover,
+.btn-del:hover{
+   background-color: #331B3F;
+}
+/* end .btn-add  */
+
+.del_all_users{
+   display: block;
+   padding: .50rem;
+   font-size: 1.1rem;
+   background-color: var(--orange);
+   cursor: pointer;
+   width: max-content;
+   border-radius: 0;
+   float: right;
+   outline: none;
+   color: var(--white);
+   margin: .50rem 0;
+}
+
+.times{
+   padding: .50rem 1rem;
+   outline: none;
+   border: none;
+   background-color: var(--white);
+}
+.times:hover{
+   background-color: var(--light-bg);
+   border-radius: 50%;
+}
+.modal-content{
+   border-radius: 3px;
+}
+.modal-dialog{
+   max-width: 600px;
+}
+
+/* end time  */
+
+.product{
+   overflow: hidden;
+   background-color: var(--white);
+}
+.product .flex{
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+   
+}
+
+.product .form-group{
+   display: flex;
+   flex-direction: column;
+   margin: .60rem 0;
+   width: 90%;
+}
+
+.product .form-group label{
+   font-size: 1.2rem;
+}
+.product .form-group .box{
+   width: 90%;
+   border: 1px solid var(--black);
+   outline: none;
+   padding: .50rem;
+   font-size: 1rem;
+   background-color: var(--light-bg);
+   border-radius: 3px;
+}
+.product .form-group .box:focus{
+   border: 1px solid var(--main-color);
+}
+/* .product .form-group .box[type='file']{
+   width: 130px;
+   height: 50px;
+   background-image: url(../images/gallery.png);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   position: relative;
+} */
+.product .flex .form-group img{
+   width: 130px;
+   height: 130px;
+   object-fit: cover;
+}
+.product .btn-primary{
+   align-self: flex-start;
+   margin-top: .50rem;
+   padding: .50rem;
+   font-size: 1.1rem;
+   border-radius: 3px;
+   float: right;
+}
+.product .btn-primary:hover{
+   background-color: #331B3F;
+}
+/* end .product  */
+
+#fetchOrder{
+   margin: 0 auto;
+}
+.wrap-order{
+   width: 100%;
+   display: grid;
+   grid-template-columns: repeat(auto-fit,32%);
+   align-items: flex-start;
+   gap: 1rem;
+}
+.main-box{
+   margin-bottom: 2rem;
+   padding: 1rem;
+   border-radius: 5px;
+   box-shadow: var(--box-shadow);
+   background-color: var(--white);
+}
+.main-box .box{
+   font-weight: 500;
+   margin: .50rem 0;
+}
+.main-box .box span{
+   color: var(--main-color);
+}
+.main-box .procedure{
+   padding: .70rem;
+   outline: none;
+   border: none;
+   background-color: var(--light-bg);
+   width: 100%;
+   font-size: 1.2rem;
+   border-radius: 5px;
+}
+.main-box .btn-warning,
+.main-box .btn-danger{
+   width: 49%;
+}
+/* end .main-box  */
+
+.admin-content{
+   display: flex;
+   justify-content: space-between;
+}
+.admin-content .view-profile{
+   margin: 1rem 0;
+   background-color: var(--white);
+   padding: 1rem;
+   border-radius: 5px;
+   box-shadow: var(--box-shadow);
+   align-items: center;
+}
+.admin-content .view-profile p{
+   text-align: center;
+   padding-top: .50rem;
+   font-size: 1.5rem;
+   font-weight: bold;
+   color: var(--orange);
+}
+.admin-content .view-profile .btn-warning,
+.admin-content .view-profile .btn-primary{
+   width: 100%;
+   margin: .60rem 0;
+   font-size: 1.2rem;
+}
+.profile{
+   width: 100%;
+   margin: 1rem 0;
+   padding: 1rem;
+   box-shadow: var(--box-shadow);
+   border-radius: 5px;
+   background-color: var(--white);
+}
+.profile .box{
+   width: 100%;
+   padding: .50rem;
+   font-size: 1.1rem;
+   background-color: var(--light-bg);
+   border-radius: 5px;
+   outline: none;
+   border: none;
+   margin: .50rem 0;
+}
+.profile .btnProf{
+   width: 100%;
+   margin-top: .70rem;
+}
+.profile .btnProf button{
+   padding: .50rem;
+   font-size: 1.1rem;
+}
+
+.iconPro button:hover{
+   color: #331B3F;
+}
+/* end .iconPro  */
+
+.edit-product{
+   max-width: 100%;
+   background-color: var(--white);
+}
+
+.edit-product .main-box{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   border: 2px solid var(--black);
+   border-radius: 3px;
+   padding: 1rem;
+}
+.edit-product .main-box .main-image{
+   margin: .50rem auto;
+   padding: .50rem;
+   width: 100%;
+}
+.edit-product .main-box .main-image img{
+   width: 300px;
+   height: 300px;
+   object-fit: contain;
+}
+.edit-product .main-box .sub-image{
+   display: flex;
+   flex-wrap: nowrap;
+   text-align: center;
+   justify-content: center;
+}
+.edit-product .main-box .sub-image img{
+   width: 100%;
+   height: 100px;
+   object-fit: contain;
+   border: 2px solid var(--black);
+   border-radius: 3px;
+   padding: .50rem;
+   margin: 0 .50rem;
+   cursor: pointer;
+}
+.edit-product .main-box .sub-image img:hover{
+   transform: scale(1.07);
+   transition: all .3s ease-in-out;
+}
+.edit-product .form-group{
+   display: flex;
+   flex-direction: column;
+   text-align: start;
+}
+.edit-product .form-group  label{
+   font-size: 1.2rem;
+   color: var(--light-color);
+}
+.edit-product .form-group .box{
+   padding: .50rem;
+   margin: .50rem 0;
+   /* border: 2px solid var(--black); */
+   border-radius: 4px;
+   background-color: var(--light-bg);
+   display: grid;
+   font-size: 1.1rem;
+}
+.edit-product .form-group .box:focus{
+   border: 1px solid var(--black);
+}
+.edit-product .form-group button{
+   font-size: 1.1rem;
+   margin-top: .50rem;
+   padding: .50rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:991px){
+
+   html{
+      font-size: 77%;
+   }
+   .admin-nav{
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      background-color: #343a40;
+      transition: 0.3s all ease-in-out;
+      position: sticky;
+      top: 0;
+      left: 0;  
+   }
+
+}
+
+@media (max-width:768px){
+   .admin-nav{
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      background-color: #343a40;
+      transition: 0.3s all ease-in-out;
+      position: sticky;
+      top: 0;
+      left: 0;  
+  }
+  .resNav{
+   position: fixed;
+   top: 0;
+  }
+  .admin-content{
+     margin-top: 4rem;
+  }
+
+
+}
+
+@media (max-width:450px){
+   .admin-nav{
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      background-color: #343a40;
+      transition: 0.3s all ease-in-out;
+      position: sticky;
+      top: 0;
+      left: 0;  
+      z-index: 103434;
+  }
+
+}
